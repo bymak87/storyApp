@@ -10,7 +10,7 @@
     <h1>There are {{stories.length}} stories</h1>
   <ul>
     <li ng-repeat="story in stories">
-      {{story.email}}
+      {{story.email}} {{story.story}}
     </li>
   </ul>
   <form ng-submit="createStory()">
@@ -21,6 +21,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
   <script src="/js/app.js"></script>
+  <script src="/js/angular-ui-router.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-resource.js"></script>
   <script src="/js/controllers/stories-controller.js"></script>
 </body>

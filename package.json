@@ -1,4 +1,7 @@
 {
-  "name" : "story-app",
-  "version" : "0.0.1"
+  "name": "story-app",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.9.7"
+  }
 }

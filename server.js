@@ -4,10 +4,20 @@ var express           = require('express'),
     mongoose          = require('mongoose'),
     storiesController = require('./server/controllers/stories-controller');
 
+
 mongoose.connect('mongodb://localhost:27017/story-demo');
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/client/views/index.html');
+});
+
+app.get('/about', function (req, res) {
+  res.sendFile(__dirname + '/client/views/about.html');
+});
+
+app.all('/*', function(req, res, next) {
+    // Just send the index.html for other files to support HTML5Mode
+    res.sendfile('index.html', { root: __dirname });
 });
 
 app.use(bodyParser.json());

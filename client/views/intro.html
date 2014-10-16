@@ -1,0 +1,14 @@
+<div ng-controller="storiesController">
+    <h1>Your story begins...</h1>
+
+
+  <form ng-submit="createStory()">
+    <label>What is your name?</label>
+    <input type="text" placeholder="Name" ng-model="name"></br>
+    <label>What is your sidekick's name?</label>
+    <input type="text" placeholder="Sidekick's Name" ng-model="sidekickName"></br>
+    <label>What is your email?</label>
+    <input type="text" placeholder="Email" ng-model="email">
+    <button type="submit" ui-sref="views/about">Let's Go</button>
+  </form>
+  </div>
